@@ -3,13 +3,10 @@ package au.com.lookahead;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class RobotRun {
 
 	private Robot robot;
-	public final static String[] allowedFacings = new String[] { "NORTH",
-			"WEST", "SOUTH", "EAST" };;
 
 	public RobotRun() {
 		robot = new Robot();
@@ -90,8 +87,7 @@ public class RobotRun {
 					} else if (facing.equalsIgnoreCase("SOUTH")) {
 						robot.place(x, y, Direction.SOUTH);
 					} else {
-						retVal = "Wrong FACING. Allowed FACING are: \""
-								+ allowedFacings + "\"";
+						retVal = "Wrong FACING. Allowed FACING are: NORTH, WEST, SOUTH, EAST";
 					}
 			} catch (NumberFormatException e) {
 				retVal = "Wrong PLACE Integer format. First 2 arguments have to be integers \""
