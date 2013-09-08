@@ -186,8 +186,10 @@ public class Robot {
 	/**
 	 * returns reporting string
 	 * @return reportString
+	 * @throws NotPlacedOrDirectedException 
 	 */
-	public String getReport() {
+	public String getReport() throws NotPlacedOrDirectedException {
+		validatePlacedAndDirected();
 		return x.toString() + "," + y.toString() + "," + this.dir;
 	}
 

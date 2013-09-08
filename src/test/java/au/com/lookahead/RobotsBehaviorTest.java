@@ -50,10 +50,11 @@ public class RobotsBehaviorTest {
 	 * LEFT
 	 * REPORT
 	 * Output: 0,0,WEST
+	 * @throws NotPlacedOrDirectedException 
 	 * @throws InvalidPositioningException 
 	 */
 	@Test
-	public void testPlace00NorthLeftReport() {
+	public void testPlace00NorthLeftReport() throws NotPlacedOrDirectedException {
 		try {
 			assertEquals(robot.place(0, 0, Direction.NORTH).left().getReport(), "0,0,WEST");
 		} catch (InvalidPositioningException e) {
