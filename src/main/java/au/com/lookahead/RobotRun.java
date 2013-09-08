@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * RobotRun: runner for Robot app 
+ * @author ben
+ *
+ */
 public class RobotRun {
 
 	private Robot robot;
@@ -31,7 +36,12 @@ public class RobotRun {
 		}
 	}
 
-	protected String processCommand(String input) {
+	/**
+	 * processCommand processes Robot console commands
+	 * @param input
+	 * @return
+	 */
+	public String processCommand(String input) {
 		String splt[] = input.split(" ");
 		String retVal = "";
 		if (splt.length == 2 && "PLACE".equalsIgnoreCase(splt[0])) {

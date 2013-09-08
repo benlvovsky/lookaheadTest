@@ -1,5 +1,10 @@
 package au.com.lookahead;
 
+/**
+ * Main functionality Robot class
+ * @author ben
+ *
+ */
 public class Robot {
 
 	private static final int MAXY = 4;
