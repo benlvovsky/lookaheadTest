@@ -24,7 +24,10 @@ public class RobotRun {
 			String input;
 
 			while ((input = br.readLine()) != null) {
-				System.out.println(rr.processCommand(input));
+				String outputString = rr.processCommand(input);
+				if(outputString.length() > 0) {
+					System.out.println(outputString);
+				}
 			}
 		} catch (IOException io) {
 			io.printStackTrace();
@@ -70,7 +73,7 @@ public class RobotRun {
 	 * @param retVal
 	 * @return
 	 */
-	protected String doPlace(String input, String[] splt) {
+	private String doPlace(String input, String[] splt) {
 		String retVal = "";
 		String placePrm[] = splt[1].split(",");
 		if (placePrm.length == 3) {
@@ -107,7 +110,7 @@ public class RobotRun {
 	 * @param input
 	 * @return
 	 */
-	protected String doMove(String input) {
+	private String doMove(String input) {
 		String retVal = "";
 		try {
 			robot.move();

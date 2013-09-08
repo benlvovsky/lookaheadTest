@@ -96,21 +96,4 @@ public class RobotRunTest {
 		assertTrue(rr.processCommand("GO").contains("Wrong command"));
 		assertTrue(rr.processCommand("REPORT ALL").contains("Wrong command"));
 	}
-
-//	/**
-//	 * Test method for {@link au.com.lookahead.RobotRun#doPlace(java.lang.String, java.lang.String[])}.
-//	 */
-//	@Test
-//	public void testDoPlace() {
-//		fail("Not yet implemented");
-//	}
-//
-//	/**
-//	 * Test method for {@link au.com.lookahead.RobotRun#doMove(java.lang.String)}.
-//	 */
-//	@Test
-//	public void testDoMove() {
-//		fail("Not yet implemented");
-//	}
-//
 }
